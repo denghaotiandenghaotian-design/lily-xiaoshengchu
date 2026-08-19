@@ -40,7 +40,7 @@
 
     // 初始路由
     var hash = (location.hash || '').replace('#', '');
-    if (hash && ['dashboard', 'kaodian', 'plan', 'mindmap', 'recite', 'speaking', 'listening'].indexOf(hash) >= 0) {
+    if (hash && ['dashboard', 'kaodian', 'plan', 'mindmap', 'recite', 'speaking', 'listening', 'exams'].indexOf(hash) >= 0) {
       Core.go(hash);
     } else {
       Core.go('dashboard');
