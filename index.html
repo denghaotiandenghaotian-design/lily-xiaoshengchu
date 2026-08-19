@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>台州小升初学习辅助系统 · Lily 专用</title>
+<meta name="description" content="面向台州（人教版）五六年级小升初的学习辅助系统：考点库、复习计划、思维导图、背诵打卡、口语练习、听力训练六大模块。">
+<link rel="stylesheet" href="assets/css/app.css">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Ctext y='50' font-size='52'%3E%F0%9F%93%9A%3C/text%3E%3C/svg%3E">
+</head>
+<body>
+
+<div id="app-loading">正在加载学习系统…</div>
+
+<header class="topbar">
+  <div class="topbar-inner">
+    <div class="brand">
+      <span class="brand-logo">📚</span>
+      <div class="brand-text">
+        <strong>台州小升初学习辅助系统</strong>
+        <small id="brand-sub">语文·统编版 / 数学·人教版 / 英语·PEP</small>
+      </div>
+    </div>
+    <div class="topbar-right">
+      <div class="countdown-chip" id="countdown-chip" title="点击设置考试日期">
+        <span class="cd-label">距考试</span>
+        <span class="cd-num" id="cd-num">--</span>
+        <span class="cd-unit">天</span>
+      </div>
+      <button class="icon-btn" id="btn-settings" title="设置">⚙️</button>
+    </div>
+  </div>
+  <nav class="mainnav" id="mainnav">
+    <button data-view="dashboard" class="active">🏠 首页</button>
+    <button data-view="kaodian">📗 考点库</button>
+    <button data-view="plan">🗓️ 复习计划</button>
+    <button data-view="mindmap">🧠 思维导图</button>
+    <button data-view="recite">🔖 背诵打卡</button>
+    <button data-view="speaking">🎤 口语练习</button>
+    <button data-view="listening">🎧 听力训练</button>
+  </nav>
+</header>
+
+<div id="version-banner" class="version-banner hidden">
+  <span>⚠️ 英语教材版本尚未确认：台州部分学校使用 <b>人教PEP</b>，部分使用 <b>译林版</b>。当前按 <b id="vb-cur">PEP</b> 输出，请确认后锁定。</span>
+  <span class="vb-actions">
+    <button class="btn btn-sm btn-primary" id="vb-confirm">确认用 PEP</button>
+    <button class="btn btn-sm" id="vb-switch">改为译林版</button>
+  </span>
+</div>
+
+<main id="main">
+  <section class="view" id="view-dashboard"></section>
+  <section class="view hidden" id="view-kaodian"></section>
+  <section class="view hidden" id="view-plan"></section>
+  <section class="view hidden" id="view-mindmap"></section>
+  <section class="view hidden" id="view-recite"></section>
+  <section class="view hidden" id="view-speaking"></section>
+  <section class="view hidden" id="view-listening"></section>
+</main>
+
+<footer class="footer">
+  <div>
+    台州小升初学习辅助系统 · v1.0 ·
+    教材锁定：语文统编版 / 数学人教版 / 英语<span id="foot-en">PEP</span>
+  </div>
+  <div class="footer-note">
+    数据全部保存在本机浏览器（localStorage），不上传服务器。换设备请用「设置 → 导出备份」迁移。<br>
+    考频与真题规律为教研通用判断，标注「待核对」处请以台州本地真卷 / 学校考纲为准。
+  </div>
+</footer>
+
+<!-- 通用弹窗 -->
+<div class="modal-mask hidden" id="modal-mask">
+  <div class="modal" id="modal">
+    <div class="modal-head">
+      <h3 id="modal-title">标题</h3>
+      <button class="icon-btn" id="modal-close">✕</button>
+    </div>
+    <div class="modal-body" id="modal-body"></div>
+    <div class="modal-foot" id="modal-foot"></div>
+  </div>
+</div>
+
+<div id="toast-wrap"></div>
+
+<script src="assets/js/core.js"></script>
+<script src="assets/js/data/kaodian.js"></script>
+<script src="assets/js/data/mindmap.js"></script>
+<script src="assets/js/data/recite.js"></script>
+<script src="assets/js/data/speaking.js"></script>
+<script src="assets/js/data/listening.js"></script>
+<script src="assets/js/modules/dashboard.js"></script>
+<script src="assets/js/modules/kaodian.js"></script>
+<script src="assets/js/modules/plan.js"></script>
+<script src="assets/js/modules/mindmap.js"></script>
+<script src="assets/js/modules/recite.js"></script>
+<script src="assets/js/modules/speaking.js"></script>
+<script src="assets/js/modules/listening.js"></script>
+<script src="assets/js/app.js"></script>
+</body>
+</html>
