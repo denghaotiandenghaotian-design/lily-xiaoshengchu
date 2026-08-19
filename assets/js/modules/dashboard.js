@@ -29,10 +29,15 @@
     var listenRec = s.listening.records || {};
     var listenDone = Object.keys(listenRec).filter(function (k) { return listenRec[k].done; }).length;
 
+    // 模考真题
+    var examRec = (s.exams && s.exams.records) || {};
+    var examDone = Object.keys(examRec).filter(function (k) { return examRec[k].done; }).length;
+
     return {
       total: kdAll.length, mastered: mastered, weak: weak,
       recTotal: recTotal, recActive: recActive, recDoneToday: recDoneToday,
       speakCnt: speakCnt, listenTotal: window.LISTENING.length, listenDone: listenDone,
+      examDone: examDone, examTotal: (window.EXAMS || []).length,
       streak: s.streak.days || 0
     };
   }
@@ -93,6 +98,7 @@
       { k: '背诵打卡', n: st.recTotal, sub: '进行中 ' + st.recActive + ' · 今日完成 ' + st.recDoneToday, view: 'recite', ico: '🔖' },
       { k: '口语练习', n: st.speakCnt, sub: '累计评分 ' + st.speakCnt + ' 次', view: 'speaking', ico: '🎤' },
       { k: '听力训练', n: st.listenTotal, sub: '已完成 ' + st.listenDone, view: 'listening', ico: '🎧' },
+      { k: '模考真题', n: st.examDone + '/' + st.examTotal, sub: '模拟10套·真题5套', view: 'exams', ico: '📝' },
       { k: '连续打卡', n: st.streak + ' 天', sub: '坚持就是胜利', view: 'dashboard', ico: '🔥' },
       { k: '复习计划', n: (Core.S().plan ? '已生成' : '未生成'), sub: '个性化每日任务', view: 'plan', ico: '🗓️' }
     ];
@@ -127,6 +133,7 @@
       '<div class="panel"><h3>🚀 快速入口</h3>' +
       '<div class="quick-grid">' +
       '<button class="quick-btn" data-goto="mindmap">🧠 思维导图</button>' +
+      '<button class="quick-btn" data-goto="exams">📝 模考真题</button>' +
       '<button class="quick-btn" data-goto="speaking">🎤 口语练习</button>' +
       '<button class="quick-btn" data-goto="listening">🎧 听力训练</button>' +
       '<button class="quick-btn" data-goto="plan">🗓️ 复习计划</button>' +
