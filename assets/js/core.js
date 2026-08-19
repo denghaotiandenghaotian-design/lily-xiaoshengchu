@@ -44,6 +44,9 @@
         records: {},                  // materialId -> {done:true, correct:n, total:n, date, answers:{}}
         planStart: ''
       },
+      exams: {
+        records: {}                   // examId -> {done, date, objCorrect, objTotal, objScore, objTotalScore, subjTotal, best}
+      },
       streak: { last: '', days: 0 },
       log: []                         // 行为流水（最近 200 条）
     };
