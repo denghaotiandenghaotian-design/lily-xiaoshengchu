@@ -334,3 +334,57 @@ button { font-family: inherit; cursor: pointer; }
   .topbar, .mainnav, .version-banner, .footer, #toast-wrap, .filters, .mod-head, .rec-actions, .ls-actions { display: none !important; }
   body { background: #fff; } .panel, .kd-card, .rec-card { box-shadow: none; break-inside: avoid; }
 }
+
+/* ==================== 模考真题 exams ==================== */
+.ex-filters { display: flex; flex-wrap: wrap; gap: 16px; margin: 14px 0 18px; }
+.ex-fgrp { display: flex; align-items: center; gap: 6px; flex-wrap: wrap; }
+.ex-flabel { font-size: 13px; color: #6b7280; margin-right: 2px; }
+.ex-fbtn { border: 1px solid #d8dee9; background: #fff; color: #4b5563; padding: 5px 12px; border-radius: 999px; font-size: 13px; cursor: pointer; transition: .15s; }
+.ex-fbtn:hover { border-color: #3457d5; color: #3457d5; }
+.ex-fbtn.active { background: #3457d5; border-color: #3457d5; color: #fff; }
+
+.ex-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(280px, 1fr)); gap: 16px; }
+.ex-card { background: #fff; border: 1px solid #e6ebf3; border-radius: 14px; padding: 16px 16px 14px; display: flex; flex-direction: column; box-shadow: 0 2px 10px rgba(52,87,213,.05); transition: .18s; }
+.ex-card:hover { box-shadow: 0 6px 20px rgba(52,87,213,.14); transform: translateY(-2px); }
+.ex-card-top { display: flex; align-items: center; gap: 6px; flex-wrap: wrap; }
+.ex-note-flag { margin-left: auto; background: #e2a252; color: #fff; padding: 1px 8px; border-radius: 999px; font-size: 11px; }
+.ex-card-title { font-size: 16px; color: #1f2937; margin: 10px 0 4px; line-height: 1.4; }
+.ex-card-meta { font-size: 12.5px; color: #8a94a6; min-height: 18px; }
+.ex-card-info { font-size: 12.5px; color: #6b7280; margin: 8px 0 12px; }
+.ex-card-foot { margin-top: auto; display: flex; align-items: center; justify-content: space-between; gap: 8px; }
+.ex-badge { font-size: 11.5px; color: #8a94a6; padding: 2px 8px; border-radius: 999px; background: #f3f5fa; }
+.ex-badge.ok { color: #1f8a4c; background: #e6f6ec; }
+
+.chip-real { background: #fdeede; color: #b9772a !important; }
+.chip-mock { background: #e8edfb; color: #3457d5 !important; }
+
+.ex-detail-head { display: flex; align-items: center; gap: 12px; flex-wrap: wrap; margin-bottom: 6px; }
+.ex-detail-title { font-size: 17px; font-weight: 700; color: #1f2937; }
+.ex-detail-meta { font-size: 12.5px; color: #8a94a6; width: 100%; }
+.ex-note { background: #fff7ec; border: 1px solid #f3d9a8; color: #8a5a16; padding: 10px 12px; border-radius: 10px; font-size: 13px; margin: 10px 0 16px; }
+
+.ex-part { margin-bottom: 18px; }
+.ex-part-name { font-weight: 700; color: #3457d5; font-size: 14.5px; margin: 14px 0 8px; padding-left: 9px; border-left: 4px solid #3457d5; }
+.ex-q { display: flex; gap: 10px; padding: 12px 0; border-bottom: 1px dashed #eef1f6; }
+.ex-q-no { font-weight: 700; color: #3457d5; min-width: 22px; text-align: right; }
+.ex-q-body { flex: 1; }
+.ex-q-stem { color: #1f2937; font-size: 14.5px; line-height: 1.6; margin-bottom: 8px; }
+.ex-q-score { color: #8a94a6; font-size: 12px; }
+.ex-opts { display: flex; flex-direction: column; gap: 7px; }
+.ex-opt { display: flex; align-items: center; gap: 8px; padding: 7px 10px; border: 1px solid #e3e8f1; border-radius: 9px; cursor: pointer; font-size: 14px; transition: .15s; }
+.ex-opt:hover { border-color: #3457d5; }
+.ex-opt.opt-correct { background: #e6f6ec; border-color: #4caf72; color: #1f8a4c; }
+.ex-opt.opt-wrong { background: #fdeaea; border-color: #e08a8a; color: #c0392b; }
+.ex-opt input { accent-color: #3457d5; }
+.ex-exp { margin-top: 8px; background: #f6f8fc; border-radius: 8px; padding: 8px 10px; font-size: 13.5px; color: #374151; line-height: 1.6; }
+.ex-key { color: #6b7280; }
+.ex-textarea { width: 100%; min-height: 64px; border: 1px solid #dde3ee; border-radius: 9px; padding: 9px 11px; font-size: 14px; font-family: inherit; resize: vertical; color: #1f2937; }
+.ex-textarea:focus { outline: none; border-color: #3457d5; }
+.ex-reveal-row { margin-top: 7px; }
+.ex-reveal { background: #f3f5fa; }
+
+.ex-actions { margin: 20px 0 10px; display: flex; gap: 10px; }
+.ex-result { background: #f6f9ff; border: 1px solid #d6e2fb; border-radius: 12px; padding: 14px 16px; margin: 8px 0 20px; }
+.ex-result-h { font-weight: 700; color: #3457d5; margin-bottom: 8px; }
+.ex-result-line { font-size: 14.5px; color: #374151; margin: 5px 0; }
+.ex-result-tip { font-size: 13px; color: #6b7280; margin-top: 8px; line-height: 1.6; }
