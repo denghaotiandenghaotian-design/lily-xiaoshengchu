@@ -10,9 +10,6 @@
     // 考点
     var total = window.KAODIAN.length + (s.kaodian.custom || []).length;
     var mastered = 0;
-    for (var i = 0; i < window.KAODIAN.length; i++) {
-      if (s.kaodian.mastered[window.KAODIAN[i].id] || s.kaodian.customMastered && s.kaodian.customMastered[window.KAODIAN[i].id]) {}
-    }
     var kdAll = window.KAODIAN.concat(s.kaodian.custom || []);
     kdAll.forEach(function (k) { if (s.kaodian.mastered[k.id]) mastered++; });
     var weak = Object.keys(s.kaodian.weak || {}).length;
